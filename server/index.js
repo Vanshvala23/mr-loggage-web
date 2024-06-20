@@ -3,6 +3,7 @@ const cors = require("cors");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const authRouter = require("./routes/authRoutes");
+const profileRouter = require("./routes/profileRoutes");
 
 dotenv.config();
 
@@ -26,6 +27,7 @@ try {
 }
 
 app.use("/api/auth", authRouter);
+app.use("/api/profile", profileRouter);
 
 app.get("/", (req, res) => {
   res.send("Server is running");

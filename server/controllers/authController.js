@@ -8,7 +8,16 @@ const User = require("../models/User");
 const saltRounds = 10;
 
 const signup = async (req, res) => {
-  const { email, password, fullName, address, phoneNumber, gender, dateOfBirth } = req.body;
+  const {
+    email,
+    password,
+    firstName,
+    lastName,
+    address,
+    phoneNumber,
+    gender,
+    dateOfBirth,
+  } = req.body;
   try {
     const existingUser = await User.findOne({ email });
     if (existingUser) {
@@ -20,7 +29,8 @@ const signup = async (req, res) => {
     const newUser = new User({
       email,
       password: hashedPassword,
-      fullName,
+      firstName,
+      lastName,
       address,
       phoneNumber,
       gender,
@@ -75,4 +85,3 @@ const signin = async (req, res) => {
 };
 
 module.exports = { signup, signin };
-

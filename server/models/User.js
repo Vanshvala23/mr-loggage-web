@@ -11,12 +11,13 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    fullName: {
+    firstName: {
       type: String,
       required: true,
     },
-    address: {
+    lastName: {
       type: String,
+      required: true,
     },
     phoneNumber: {
       type: String,
@@ -26,6 +27,10 @@ const userSchema = new mongoose.Schema(
       enum: ["Male", "Female", "Other", "Prefer not to say"],
       required: true,
     },
+    dateOfBirth: {
+      type: Date,
+      required: true,
+    },
   },
   { timestamps: true }
 );
@@ -33,3 +38,4 @@ const userSchema = new mongoose.Schema(
 const User = mongoose.model("User", userSchema);
 
 module.exports = User;
+

@@ -6,7 +6,7 @@ const authRouter = require("./routes/authRoutes");
 const profileRouter = require("./routes/profileRoutes");
 const testimonialRouter = require("./routes/testimonialRoutes");
 
-mongoose.connect("mongodb+srv://mrloggage.r4ejgme.mongodb.net/",{
+mongoose.connect("mongodb+srv://MrLoggage:mrloggagekartik@mrloggage.r4ejgme.mongodb.net",{
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })

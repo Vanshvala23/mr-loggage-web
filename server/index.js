@@ -5,7 +5,10 @@ const dotenv = require("dotenv");
 const authRouter = require("./routes/authRoutes");
 const profileRouter = require("./routes/profileRoutes");
 
-dotenv.config();
+mongoose.connect("mongodb+srv://mrloggage.r4ejgme.mongodb.net/",{
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
 
 const PORT = process.env.PORT || 5000;
 const app = express();

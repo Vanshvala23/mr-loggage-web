@@ -4,9 +4,13 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const authRouter = require("./routes/authRoutes");
 const profileRouter = require("./routes/profileRoutes");
+const testimonialRouter = require("./routes/testimonialRoutes");
 const deliveryRouter = require("./routes/deliveryRoutes");
 
-dotenv.config();
+mongoose.connect("mongodb+srv://mrloggage.r4ejgme.mongodb.net/", {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
 
 const PORT = process.env.PORT || 5000;
 const app = express();
@@ -29,6 +33,7 @@ try {
 
 app.use("/api/auth", authRouter);
 app.use("/api/profile", profileRouter);
+app.use("/api/testimonial", testimonialRouter);
 app.use("/api/delivery", deliveryRouter);
 
 app.get("/", (req, res) => {

@@ -11,12 +11,13 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    fullName: {
+    firstName: {
       type: String,
       required: true,
     },
-    address: {
+    lastName: {
       type: String,
+      required: true,
     },
     phoneNumber: {
       type: String,
@@ -25,6 +26,15 @@ const userSchema = new mongoose.Schema(
       type: String,
       enum: ["Male", "Female", "Other", "Prefer not to say"],
       required: true,
+    },
+    dateOfBirth: {
+      type: Date,
+      required: true,
+      set: (val) => {
+        const date = new Date(val);
+        date.setHours(0, 0, 0, 0);
+        return date;
+      },
     },
   },
   { timestamps: true }

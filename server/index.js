@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const authRouter = require("./routes/authRoutes");
 const profileRouter = require("./routes/profileRoutes");
+const deliveryRouter = require("./routes/deliveryRoutes");
 
 dotenv.config();
 
@@ -28,6 +29,7 @@ try {
 
 app.use("/api/auth", authRouter);
 app.use("/api/profile", profileRouter);
+app.use("/api/delivery", deliveryRouter);
 
 app.get("/", (req, res) => {
   res.send("Server is running");

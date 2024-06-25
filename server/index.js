@@ -5,8 +5,9 @@ const dotenv = require("dotenv");
 const authRouter = require("./routes/authRoutes");
 const profileRouter = require("./routes/profileRoutes");
 const testimonialRouter = require("./routes/testimonialRoutes");
+const deliveryRouter = require("./routes/deliveryRoutes");
 
-mongoose.connect("mongodb+srv://mrloggage.r4ejgme.mongodb.net/",{
+mongoose.connect("mongodb+srv://mrloggage.r4ejgme.mongodb.net/", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
@@ -33,6 +34,7 @@ try {
 app.use("/api/auth", authRouter);
 app.use("/api/profile", profileRouter);
 app.use("/api/testimonial", testimonialRouter);
+app.use("/api/delivery", deliveryRouter);
 
 app.get("/", (req, res) => {
   res.send("Server is running");

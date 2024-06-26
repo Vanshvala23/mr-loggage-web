@@ -8,10 +8,10 @@ const testimonialRouter = require("./routes/testimonialRoutes");
 const deliveryRouter = require("./routes/deliveryRoutes");
 
 
-mongoose.connect("mongodb+srv://MrLoggage:mrloggagekartik@mrloggage.r4ejgme.mongodb.net",{
+mongoose.connect("mongodb+srv://kartik:mrloggagekartik@mrloggage.r4ejgme.mongodb.net",{
   useNewUrlParser: true,
   useUnifiedTopology: true,
-})
+});
 
 const PORT = process.env.PORT || 5000;
 const app = express();
@@ -25,7 +25,6 @@ app.use(
 );
 
 try {
-  mongoose.connect(process.env.MONGO_URI);
   console.log("Connected to MongoDB");
 } catch (err) {
   console.error("Error while connecting to MongoDB", err);

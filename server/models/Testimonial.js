@@ -12,7 +12,7 @@ const testimonialSchema = new mongoose.Schema(
       required: true,
     },
   },
-  { timestamps: true }
+  { timestamps: true , connection:'mrloggageTestimonals'}
 );
 
 const Testimonial = mongoose.model("Testimonial", testimonialSchema);

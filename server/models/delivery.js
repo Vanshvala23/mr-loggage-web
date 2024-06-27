@@ -81,7 +81,7 @@ const deliverySchema = new mongoose.Schema({
       required: true,
     },
   }
-}, { timestamps: true });
+}, { timestamps: true , connection:"mrloggagedeliveries"});
 
 const Delivery = mongoose.model("Delivery", deliverySchema);
 

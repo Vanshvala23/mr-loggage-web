@@ -3,9 +3,9 @@ const axios = require('axios');
 
 const app = express();
 
-// const apiEndpoint = 'https://irctc1.p.rapidapi.com/api/v1/searchTrain/';
-// const apiKey = 'fa010bf689msh7bb935263fcd024p190750jsn95132424ed79';
-// const apiHost = 'irctc1.p.rapidapi.com';
+const apiEndpoint = 'https://irctc1.p.rapidapi.com/api/v1/searchTrain/';
+const apiKey = 'fa010bf689msh7bb935263fcd024p190750jsn95132424ed79';
+const apiHost = 'irctc1.p.rapidapi.com';
 
 app.use(express.json());
 

@@ -6,6 +6,7 @@ const authRouter = require("./routes/authRoutes");
 const profileRouter = require("./routes/profileRoutes");
 const testimonialRouter = require("./routes/testimonialRoutes");
 const deliveryRouter = require("./routes/deliveryRoutes");
+// const getTrainLocation = require('./routes/TrainLocation');
 
 
 mongoose.connect("mongodb+srv://kartik:mrloggagekartik@mrloggage.r4ejgme.mongodb.net",{
@@ -35,6 +36,7 @@ app.use("/api/auth", authRouter);
 app.use("/api/profile", profileRouter);
 app.use("/api/testimonial", testimonialRouter);
 app.use("/api/delivery", deliveryRouter);
+// app.use("/api/train", getTrainLocation);
 
 app.get("/", (req, res) => {
   res.send("Server is running");

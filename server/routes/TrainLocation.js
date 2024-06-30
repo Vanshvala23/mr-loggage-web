@@ -9,8 +9,7 @@ const apiHost = 'irctc1.p.rapidapi.com';
 
 app.use(express.json());
 
-app.get('/train-location/:pnr', async (req, res) => {
-  const pnr = req.params.pnr;
+const getTrainLocation = async (pnr) => {
   try {
     const response = await axios.get(`${apiEndpoint}${pnr}`, {
       headers: {
@@ -19,7 +18,17 @@ app.get('/train-location/:pnr', async (req, res) => {
       }
     });
 
-    const data = response.data;
+    return response.data;
+  } catch (error) {
+    console.error(error);
+    throw error;
+  }
+};
+
+app.get('/train-location/:pnr', async (req, res) => {
+  const pnr = req.params.pnr;
+  try {
+    const data = await getTrainLocation(pnr);
     res.json(data);
   } catch (error) {
     console.error(error);
@@ -30,3 +39,5 @@ app.get('/train-location/:pnr', async (req, res) => {
 app.listen(3000, () => {
   console.log('Server listening on port 3000');
 });
+
+module.exports = getTrainLocation ;

@@ -2,6 +2,9 @@ import React from 'react';
 import './Home.css';
 import logo from '../assets/nav.png';
 import BG from '../assets/Bg.jpeg';
+import { FaLuggageCart } from "react-icons/fa";
+import { MdWarehouse } from "react-icons/md";
+import delivery from '../assets/Delivery.jpg';
 
 function Home() {
   return (
@@ -42,21 +45,22 @@ function Home() {
           <div className="service-cards">
             <div className="service-card">
               <div className="service-icon">
-                <img src="/images/icon-luggage-pickup.png" alt="Luggage Pickup" />
+                <FaLuggageCart size="50px" cursor="pointer" transition="all 0.2s ease-in-out" color='Green' />
               </div>
               <h3>LUGGAGE PICKUP</h3>
               <p>Enjoy the convenience of having your luggage picked up from your location. Our reliable team ensures a hassle-free start to your journey.</p>
             </div>
             <div className="service-card">
               <div className="service-icon">
-                <img src="/images/icon-luggage-storage.png" alt="Luggage Storage" />
+                <MdWarehouse size="50px" cursor="pointer" transition="all 0.2
+                s ease-in-out" color='Green' />
               </div>
               <h3>LUGGAGE STORAGE</h3>
               <p>Secure and affordable storage solutions for your luggage. Whether short-term or long-term, your belongings are safe with us.</p>
             </div>
             <div className="service-card">
               <div className="service-icon">
-                <img src="/images/icon-door-to-door-delivery.png" alt="Door-to-Door Delivery" />
+                <img src={delivery} alt="Door-to-Door Delivery" />
               </div>
               <h3>DOOR-TO-DOOR DELIVERY</h3>
               <p>Get your luggage delivered directly to your destination. We handle your bags with care and ensure they arrive on time.</p>

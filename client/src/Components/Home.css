@@ -1,0 +1,507 @@
+/* General styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  p {
+    margin-bottom: 1rem;
+  }
+  
+  a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: #0056b3;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  
+  /* Header styles */
+  .header {
+    background-color: #f8f9fa;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* .logo img {
+    margin-top: 4px;
+    margin-left: -61vh;
+    width: 4em;
+    position: relative;
+  } */
+  
+  .navigation ul {
+    height: 50px;
+    background: rgba(51,58,56,0.6);
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 100;
+
+  }
+  .navigation h
+  {
+    color: #FFFFFF;
+  }
+  .navigation img{
+    position:absolute;
+    width: 26px;
+    height: 26px;
+    left: 36px;
+    top:11px;
+  }
+  
+  .navigation li {
+    margin-left: 1rem;
+  }
+  
+  /* Hero styles */
+  .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+    background-color: #eee;
+    background-image: url('../assets//Bg.jpeg');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .hero-content {
+    text-align: center;
+    padding: 0 2rem;
+    color: #fff;
+  }
+  .hero-content h1
+  {
+    position: absolute;
+    width: 519px;
+    height: 154px;
+    left: 67px;
+    top: 339px;
+    font-family: 'Lato';    
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 77px;
+    color: #FFFFFF
+  }
+  .hero-content p
+  {
+    position: absolute;
+    width: 504px;
+    height:26px;
+    left: 67px;
+    top: 503px;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 26px;
+  }
+  
+  .hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  
+  .button {
+    background-color: #388603;
+    color: #fff;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #282829;
+  }
+  
+  .hero-image {
+    display: none;
+  }
+  
+  /* Services styles */
+  .services {
+    padding: 4rem 0;
+  }
+  
+  .service-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .service-card {
+    border: 1px solid #ddd;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .service-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    background-color: #f8f9fa;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+  }
+  
+  .service-icon img {
+    width: 50px;
+  }
+  
+  /* Stats styles */
+  .stats {
+    padding: 4rem 0;
+    background-color: #f8f9fa;
+  }
+  
+  .stat {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+  }
+  
+  .stat-icon {
+    font-size: 3rem;
+    color: #007bff;
+    margin-bottom: 1rem;
+  }
+  
+  .stat-content h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .stat-content p {
+    font-size: 1rem;
+    margin-bottom: 0;
+  }
+  
+  /* Testimonials styles */
+  .testimonials {
+    padding: 4rem 0;
+  }
+  
+  .testimonials-slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+  }
+  
+  .testimonial {
+    min-width: 300px;
+    padding: 2rem;
+    margin-right: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .testimonial-user {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .testimonial-user img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 1rem;
+  }
+  
+  .testimonial-user-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .testimonial-user-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .testimonial-user-info p {
+    font-size: 1rem;
+    margin-bottom: 0;
+  }
+  
+  /* Why Choose Us styles */
+  .why-choose-us {
+    padding: 4rem 0;
+  }
+  
+  .why-choose-us-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  .why-choose-us-card {
+    border: 1px solid #ddd;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .why-choose-us-icon {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 1rem;
+  }
+  
+  .why-choose-us-card h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* About Us styles */
+  .about-us {
+    padding: 4rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .about-us-content {
+    flex: 1;
+    padding: 0 2rem;
+  }
+  
+  .about-us-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .about-us-image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+  }
+  
+  /* About Company styles */
+  .about-company {
+    padding: 4rem 0;
+    background-color: #f8f9fa;
+  }
+  
+  .about-company-content {
+    flex: 1;
+    padding: 0 2rem;
+  }
+  
+  .about-company-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .about-company-image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+  }
+  
+  /* Unique Factor styles */
+  .unique-factor {
+    padding: 4rem 0;
+  }
+  
+  .unique-factor-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  .unique-factor-card {
+    border: 1px solid #ddd;
+    padding: 2rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .unique-factor-icon {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 1rem;
+  }
+  
+  .unique-factor-card h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Footer styles */
+  .footer {
+    background-color: #333;
+    color: #fff;
+    padding: 4rem 0;
+    text-align: center;
+  }
+  
+  .footer-logo img {
+    width: 150px;
+    margin-bottom: 2rem;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+  }
+  
+  .footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-column li {
+    margin-bottom: 1rem;
+  }
+  
+  .footer-column a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-column a:hover {
+    color: #007bff;
+  }
+  
+  .footer-social ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-social li {
+    display: inline-block;
+    margin: 0 0.5rem;
+  }
+  
+  .footer-social a {
+    color: #fff;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-social a:hover {
+    color: #007bff;
+  }
+  
+  /* Responsive Styles */
+  @media screen and (max-width: 768px) {
+    .hero {
+      flex-direction: column;
+    }
+  
+    .hero-content {
+      padding: 2rem;
+    }
+  
+    .hero-image {
+      display: block;
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      margin-bottom: 2rem;
+    }
+  
+    .service-cards {
+      grid-template-columns: 1fr;
+    }
+  
+    .stats {
+      flex-direction: column;
+    }
+  
+    .stat {
+      margin-bottom: 2rem;
+    }
+  
+    .testimonials-slider {
+      flex-direction: column;
+    }
+  
+    .testimonial {
+      margin-bottom: 2rem;
+    }
+  
+    .why-choose-us-cards {
+      grid-template-columns: 1fr;
+    }
+  
+    .about-us {
+      flex-direction: column;
+    }
+  
+    .about-us-content {
+      margin-bottom: 2rem;
+    }
+  
+    .about-company {
+      flex-direction: column;
+    }
+  
+    .about-company-content {
+      margin-bottom: 2rem;
+    }
+  
+    .unique-factor-cards {
+      grid-template-columns: 1fr;
+    }
+  
+    .footer-content {
+      flex-direction: column;
+    }
+  
+    .footer-column {
+      margin-bottom: 2rem;
+    }
+  }

@@ -5,6 +5,10 @@ import BG from '../assets/Bg.jpeg';
 import { FaLuggageCart } from "react-icons/fa";
 import { MdWarehouse } from "react-icons/md";
 import delivery from '../assets/Delivery.jpg';
+import Image from '../assets/Image.jpeg';
+import start from '../assets/image.png';
+import mrloggage from '../assets/Mr Loggage[1].png';
+import { FcCustomerSupport } from "react-icons/fc";
 
 function Home() {
   return (
@@ -31,7 +35,7 @@ function Home() {
             <p>"Effortless luggage logistics for stress-free journeys"</p>
             <div className="hero-buttons">
               <button className="button">Book Now</button>
-              <button className="button">Learn More</button>
+              <button className="Learn">Learn More</button>
             </div>
           </div>
           <div className="hero-image">
@@ -81,7 +85,7 @@ function Home() {
             </div>
             <div className="service-card">
               <div className="service-icon">
-                <img src="/images/icon-customer-support.png" alt="Customer Support" />
+                <FcCustomerSupport color='green'  size='50px' />
               </div>
               <h3>CUSTOMER SUPPORT</h3>
               <p>Our dedicated support team is available around the clock to assist you with any inquiries or issues. Your satisfaction is our priority.</p>
@@ -89,46 +93,38 @@ function Home() {
           </div>
         </div>
       </section>
-      <section className="stats">
-        <div className="container">
-          <div className="stat">
-            <div className="stat-icon">
-              <i className="fas fa-tasks"></i>
-            </div>
-            <div className="stat-content">
-              <h3>46</h3>
-              <p>PROJECTS DONE</p>
-            </div>
-          </div>
-          <div className="stat">
-            <div className="stat-icon">
-              <i className="fas fa-smile"></i>
-            </div>
-            <div className="stat-content">
-              <h3>38</h3>
-              <p>HAPPY CUSTOMERS</p>
-            </div>
-          </div>
-          <div className="stat">
-            <div className="stat-icon">
-              <i className="fas fa-suitcase"></i>
-            </div>
-            <div className="stat-content">
-              <h3>46</h3>
-              <p>LUGGAGE HANDELED</p>
-            </div>
-          </div>
-          <div className="stat">
-            <div className="stat-icon">
-              <i className="fas fa-users"></i>
-            </div>
-            <div className="stat-content">
-              <h3>12</h3>
-              <p>TEAM MEMBERS</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <section class="stats">
+  <div class="stats-container">
+    <div class="stats-icon">
+      <i class="fas fa-tasks fa-lg"></i>
+    </div>
+    <div class="stats-content">
+      <span>PROJECTS DONE:</span>
+      <span class="number">46</span>
+    </div>
+    <div class="stats-icon">
+      <i class="fas fa-smile fa-lg"></i>
+    </div>
+    <div class="stats-content">
+      <span>HAPPY CUSTOMERS:</span>
+      <span class="number">38</span>
+    </div>
+    <div class="stats-icon">
+      <i class="fas fa-suitcase fa-lg"></i>
+    </div>
+    <div class="stats-content">
+      <span>LUGGAGE HANDELED:</span>
+      <span class="number">46</span>
+    </div>
+    <div class="stats-icon">
+      <i class="fas fa-users fa-lg"></i>
+    </div>
+    <div class="stats-content">
+      <span>TEAM MEMBERS:</span>
+      <span class="number">12</span>
+    </div>
+  </div>
+</section>
       <section className="testimonials">
         <div className="container">
           <h2>Public Cheers For Us!</h2>
@@ -205,7 +201,7 @@ function Home() {
               <p>Thank you @MrLuggage for your impeccable service. My bags were picked up and delivered right to my hotel. No more dragging luggage around!</p>
             </div>
           </div>
-          <button className="button">View More</button>
+          <button className="view">View More</button>
         </div>
       </section>
       <section className="why-choose-us">
@@ -260,11 +256,12 @@ function Home() {
       <section className="about-us">
         <div className="container">
           <h2>ABOUT US</h2>
+          <div className = "rectangle"></div>
           <div className="about-us-content">
             <p>Mr Loggage, your travel companion, dedicated to providing seamless and reliable luggage transportation services, ensuring you travel light and worry-free.</p>
           </div>
           <div className="about-us-image">
-            <img src="/images/about-us-image.jpg" alt="About Us Image" />
+            <img src={Image} alt="About Us Image" />
           </div>
         </div>
       </section>
@@ -276,7 +273,7 @@ function Home() {
             <p>Dedicated to providing seamless and reliable luggage transportation services, ensuring you travel light and worry-free.</p>
           </div>
           <div className="about-company-image">
-            <img src="/images/about-company-image.jpg" alt="About Company Image" />
+            <img src={start} alt="About Company Image" />
           </div>
         </div>
       </section>
@@ -314,7 +311,7 @@ function Home() {
       <footer className="footer">
         <div className="container">
           <div className="footer-logo">
-            <img src="/images/logo.png" alt="Mr Loggage Logo" />
+            <img src={mrloggage} alt="Mr Loggage Logo" />
           </div>
           <div className="footer-content">
             <div className="footer-column">

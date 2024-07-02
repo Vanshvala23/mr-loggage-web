@@ -40,7 +40,7 @@
   /* Header styles */
   .header {
     background-color: #f8f9fa;
-    padding: 1rem 0;
+    /* padding: 1rem 0; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -91,16 +91,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 500px;
-    background-color: #eee;
+    min-height: 832px;
+    position: relative;
+    z-index:-1;
+    background-color: #08281E transparent;
     background-image: url('../assets//Bg.jpeg');
     background-size: cover;
     background-position: center;
+    
   }
   
   .hero-content {
     text-align: center;
-    padding: 0 2rem;
+    /* padding: 0 2rem; */
     color: #fff;
   }
   .hero-content h1
@@ -109,10 +112,11 @@
     width: 519px;
     height: 154px;
     left: 67px;
-    top: 339px;
+    top: 50%;
+    z-index: -1;
     font-family: 'Lato';    
     font-style: normal;
-    font-weight: 400;
+    font-weight: 800;
     font-size: 48px;
     line-height: 77px;
     color: #FFFFFF
@@ -123,7 +127,7 @@
     width: 504px;
     height:26px;
     left: 67px;
-    top: 503px;
+    top: 70%;
     font-family: 'Lato';
     font-style: normal;
     font-weight: 400;
@@ -131,26 +135,82 @@
     line-height: 26px;
   }
   
-  .hero-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 2rem;
+  .hero h1 {
+    margin-bottom: 1rem;
   }
   
+  .hero p {
+    margin-bottom: 2rem;
+  }
+  
+  .hero-image {
+    display: flex;
+    /* top: 0;
+    left: 0; */
+    /* z-index: -1; */
+    width: 100%;
+    height: 100%;
+
+  }
+  
+  .hero-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: 2rem;
+    bottom: 10em;
+  }
+  .Learn{
+    color: #333;
+    background-color: #fff;
+    padding: 1% 2%;
+    border: #282829;
+    box-shadow: #08281E;
+    position: absolute;
+    bottom: 10%;
+    left: 25%;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .Learn :hover
+  {
+    background-color: #282829;
+  }
   .button {
     background-color: #388603;
     color: #fff;
-    padding: 1rem 2rem;
+    padding: 1% 2%;
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
     border: none;
-    border-radius: 5px;
+    border-radius: 50px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+  }
+  
+  .button.primary {
+    background-color: #388603;
+    color: #fff;
+  }
+  
+  .button.secondary {
+    background-color: #fff;
+    color: #388603;
+    border: 1px solid #388603;
   }
   
   .button:hover {
     background-color: #282829;
   }
+  
+  .button.secondary:hover {
+    background-color: #fff;
+    color: #388603;
+    border: 1px solid #388603;
+  }
+  
   
   .hero-image {
     display: none;
@@ -168,10 +228,11 @@
   }
   
   .service-card {
-    border: 1px solid #ddd;
+    border: none;
     padding: 2rem;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    border-bottom: 1px solid #ddd;
+    background-color: #f8f9fa;
   }
   
   .service-icon {
@@ -189,59 +250,80 @@
     width: 60px;
     height: 60px;
   }
-  /* Stats styles */
-  .stats {
-    padding: 2rem 0; /* reduced padding to make the section smaller */
-    background-color: #f8f9fa;
-  }
-  
-  .stat {
-    position: absolute;
-    width: 1280px;
-    height: 100px; /* reduced height to make the stat box smaller */
-    left: 0px;
-    top: 1467px;
-    background: #08281E;
-  }
-  
-  .stat-icon {
-    font-size: 12px;
-    color: #FFFFFF;
-    padding: 10px;
-    background: #08281E;
-    border-radius: 10px;
+  .service-icon i
+  {
     width: 40px;
     height: 40px;
+  }
+  /* Stats styles */
+  .stats {
+    padding: 20px;
+    background-color: #08281E;
+  }
+  
+  .stats-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #08281E;
+    width: 1280px;
+    height: 199px;
+    margin: 0 auto;
+  }
+  
+  .stats-icon {
+    font-size: 20px;
+    top: 10px;
+    color: #FFFFFF;
+    margin: 2 5px;
+    padding: 2 10px;
+    border-radius: 2 10px;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   
-  .stat-icon i {
-  font-size: 20px;
-  margin: 0 2px;
-}
-  
-  .stat-content {
-    margin-left: 0.2em; /* reduced margin to make the content closer to the icon */
+  .stats-icon i {
+    font-size: 20px;
+    margin: 0 2px;
   }
   
-  .stat-content h3 {
-    font-size: 1.2rem; /* reduced font size to make the heading smaller */
-    font-weight: bold;
-    margin-bottom: 0.2rem; /* reduced margin to make the heading closer to the paragraph */
+  .stats-content {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.02em;
+    color: #FFFFFF;
+    margin-left: 20px;
   }
   
-  .stat-content p {
-    font-size: 0.8rem; /* reduced font size to make the paragraph smaller */
-    margin-bottom: 0;
-    position: absolute;
-    
+  .stats-content span {
+    margin: 0 20px;
   }
   
+  .stats-content.number {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 34px;
+    letter-spacing: 0.02em;
+    color: #CDFFF0;
+    margin: 0 10px;
+  }
   /* Testimonials styles */
   .testimonials {
     padding: 4rem 0;
+    background: linear-gradient(118.59deg, rgba(0, 105, 139, 0.4) -6.18%, rgba(38, 154, 119, 0.4) 62.3%);
+  }
+  .testimonial.container
+  {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
   }
   
   .testimonials-slider {
@@ -291,6 +373,9 @@
   .why-choose-us {
     padding: 4rem 0;
   }
+  .why-choose-us h2{
+    text-align: center;
+  }
   
   .why-choose-us-cards {
     display: grid;
@@ -320,44 +405,84 @@
   
   /* About Us styles */
   .about-us {
-    padding: 4rem 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    padding: 20px;
+    background-color:#08281E;
+    color: #388603;
   }
-  
+  .about-us .rectangle
+  {
+    width: 40px;
+    height: 7px;
+    background-color: lightgreen;
+    margin:20px auto;
+  }
+  .about-us h2{
+    text-align: center;
+    color: #FFFFFF;
+  }
   .about-us-content {
+    background-color: #08281E transparent;
+    color: #FFFFFF;
     flex: 1;
-    padding: 0 2rem;
+    padding: 20px;
+    
+  }
+  .about-us-content p{
+    color: #FFFFFF;
   }
   
   .about-us-image {
-    flex: 1;
     display: flex;
     justify-content: center;
+    position: absolute;
+    z-index: -1;
+    width: 1280px;
+    height: 373px;
+    left:-1px;
+    margin-left: -50px;
+    margin-top: -20em;
+    top: 3346px;
   }
   
   .about-us-image img {
     width: 100%;
+    z-index: -1;
+    object-fit: cover;
+    margin-top: -10rem;
+    padding: 10px;
     max-width: 500px;
     height: auto;
+    margin-top: 10rem;
+    justify-content: center;
+    margin-left: 10em;
+    background: rgba(8, 40, 30, 0.4);
   }
   
   /* About Company styles */
   .about-company {
     padding: 4rem 0;
-    background-color: #f8f9fa;
+  background-color: #f8f9fa;
+  position: relative;
   }
-  
+
   .about-company-content {
     flex: 1;
     padding: 0 2rem;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px; 
+    line-height: 31px;
+    letter-spacing: 2px;
   }
   
   .about-company-image {
     flex: 1;
+    border: #282829;
+    border-radius: 10px;
+    box-shadow: #333 inset;
     display: flex;
-    justify-content: center;
+
   }
   
   .about-company-image img {
@@ -370,7 +495,9 @@
   .unique-factor {
     padding: 4rem 0;
   }
-  
+  .unique-factor h2{
+    text-align: center;
+  }
   .unique-factor-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -402,11 +529,14 @@
     background-color: #333;
     color: #fff;
     padding: 4rem 0;
+    z-index: -1;
     text-align: center;
   }
   
   .footer-logo img {
     width: 150px;
+    background-color: #333 50deg transparent;
+    z-index: -1;
     margin-bottom: 2rem;
   }
   
